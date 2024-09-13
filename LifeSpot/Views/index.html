@@ -4,9 +4,15 @@
     <meta charset="UTF-8">
     <link href="../Static/CSS/index.css" rel="stylesheet" type="text/css">
     <title>LifeSpot</title>
+    
+    <script src="../Static/JS/index.js"></script>
+    <script src="../Static/JS/searchFunction.js"></script>
+    <script>
+        let sessionData = createSessionData();
+        sessionLog(sessionData);
+    </script>
 </head>
 <body>
-
     <header>
         <h1>LifeSpot — прямые трансляции с улиц</h1>
         <p>На данном сайте вы можете наблюдать за тем, что происходит на улицах разных городов в прямом эфире!</p>
@@ -17,34 +23,35 @@
             <a href="/"><p>Все трансляции</p></a>
             <a href="/"><p>О проекте</p></a>
             <p>Поиск:</p>
-            <input class="search" type="text">
+            <input class="search" type="text"
+                   oninput= "searchFunction(document.getElementsByTagName('input')[0].value.toLowerCase());"/>
         </div>
     </aside>
 
     <content>
-    <div class="video-container">
-        <iframe width="500" height="315" src="https://www.youtube.com/embed/whpuk-KnH_Y?si=LViNcylhlMWl49-x"
-                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+        <div class="video-container">
+            <iframe width="500" height="315" src="https://www.youtube.com/embed/whpuk-KnH_Y?si=LViNcylhlMWl49-x"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
             encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen></iframe>
-        <h3>Видео с улицы Москвы</h3>
-    </div>
+                    allowfullscreen></iframe>
+            <h3>Видео с улицы Москвы</h3>
+        </div>
 
-    <div class="video-container">
-        <iframe width="500" height="315" src="https://www.youtube.com/embed/h2HXup8nA1I?si=IZ1a6uWQ1xidGckV"
-                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+        <div class="video-container">
+            <iframe width="500" height="315" src="https://www.youtube.com/embed/h2HXup8nA1I?si=IZ1a6uWQ1xidGckV"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
             encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen></iframe>
-        <h3>Видео с улицы Нью-Йорка</h3>
-    </div>
+                    allowfullscreen></iframe>
+            <h3>Видео с улицы Нью-Йорка</h3>
+        </div>
 
-    <div class="video-container">
-        <iframe width="500" height="315" src="https://www.youtube.com/embed/j-d93A6v73Q?si=bRottdB-t8lLjRDf"
-                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+        <div class="video-container">
+            <iframe width="500" height="315" src="https://www.youtube.com/embed/j-d93A6v73Q?si=bRottdB-t8lLjRDf"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
             encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen></iframe>
-        <h3>Видео с улицы Лондона</h3>
-    </div>
+                    allowfullscreen></iframe>
+            <h3>Видео с улицы Лондона</h3>
+        </div>
     </content>
 
     <footer>

@@ -4,4 +4,12 @@
         <TargetFramework>net5.0</TargetFramework>
     </PropertyGroup>
 
+    <ItemGroup>
+      <None Remove="Static\JS\searchFunction.js" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <TypeScriptCompile Include="Static\JS\searchFunction.js" />
+    </ItemGroup>
+
 </Project>
