@@ -8,8 +8,8 @@
     <script src="../Static/JS/index.js"></script>
     <script src="../Static/JS/searchFunction.js"></script>
     <script>
-        let sessionData = createSessionData();
-        sessionLog(sessionData);
+        //let sessionData = createSessionData();
+        //sessionLog(sessionData);
     </script>
 </head>
 <body>
@@ -24,7 +24,7 @@
             <a href="/"><p>О проекте</p></a>
             <p>Поиск:</p>
             <input class="search" type="text"
-                   oninput= "searchFunction(document.getElementsByTagName('input')[0].value.toLowerCase());"/>
+                   oninput= "searchFunction(function inputFunction() { return document.getElementsByTagName('input')[0].value.toLowerCase() });"/>
         </div>
     </aside>
 
